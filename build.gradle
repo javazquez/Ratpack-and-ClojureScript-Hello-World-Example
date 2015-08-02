@@ -59,9 +59,10 @@ dependencies {
 task downloadClj <<{
   def cljsjar = new File("libs/cljs.jar")
   if(!cljsjar.exists()){
+    ant.mkdir(dir:"libs")
     ant.get(src: 'https://github.com/clojure/clojurescript/releases/download/r1.7.28/cljs.jar',
     dest: 'libs',
-    skipexisting: 'true')
+    skipexisting: 'false')
   }
  }
 
