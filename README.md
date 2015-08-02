@@ -2,6 +2,17 @@
 
 This is an example of using gradle to get ratpack up and running with [ClojureScript](https://github.com/clojure/clojurescript). I used ClojureScript's [Quick Start Guide](https://github.com/clojure/clojurescript/wiki/Quick-Start) as my reference for incorporating it into this gradle build.
 
+## TLDR
+
+you can clone the project and run
+```sh
+./gradlew run
+```
+then navigate to [http://localhost:5050/](http://localhost:5050/)
+
+ you should see text that says "**ratpack example app**" followed by "**hello world from ClojureScript**" with the current time appended
+
+
 ## build.gradle
 Below are the additional tasks I added to compile the ClojureScript files with Gradle
 
@@ -42,14 +53,6 @@ compileJava.dependsOn(compileCljs)
 
 **:output-to** will put the compiled cljs sources into this generated file
 
-
-you can clone the project and run
-```sh
-./gradlew run
-```
-then navigate to [http://localhost:5050/](http://localhost:5050/)
-
- you should see text that says "**ratpack example app**" followed by "**hello world from ClojureScript**" with the current time appended
 
 
 
